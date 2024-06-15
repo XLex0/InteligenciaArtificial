@@ -32,7 +32,7 @@ lista_nombres = pickle.load(open("lista_nombre_filtrada.pkl", "rb"))
 print(f"Shape de lista_atributos: {lista_atributos.shape}")
 
 # Ruta de la imagen de prueba
-ruta_test = r"C:\Users\Xelan\Downloads\archive\test\image\14222_00.jpg"
+ruta_test = r"C:\Users\Xelan\OneDrive\Escritorio\chica3.jpg"
 resultado = True
 imagen = cv2.imread(ruta_test)
 
@@ -54,7 +54,7 @@ if resultado:
     print(f"Longitud de los atributos: {len(atributos)}")
 
     # Inicializar el modelo de vecinos más cercanos
-    neighbors = NearestNeighbors(n_neighbors=6, algorithm="brute", metric="euclidean")
+    neighbors = NearestNeighbors(n_neighbors=3, algorithm="brute", metric="euclidean")
     neighbors.fit(lista_atributos)
 
     # Encontrar los vecinos más cercanos
